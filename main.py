@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import subprocess
 from sklearn import model_selection
 from sklearn import linear_model
+import webbrowser
 
 failed_command = subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
 
@@ -33,3 +34,11 @@ if failed_command.returncode == 0:
   plt.show() # This shows the plotted graph
 else:
   print("Could not install the packages")
+  print("----------------------------------------------------")
+  no=input("If pip is installed type yes if not press no ")
+  op=no.lower()
+  if op=="yes" or op=="y":
+    webbrowser.open("https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3")
+  else:
+    webbrowser.open("https://github.com/Namanskshetty/SIMPLE_ML#prerequisite")
+  
