@@ -1,14 +1,14 @@
-import sklearn 
-import numpy as np
-import matplotlib.pyplot as plt
 import subprocess
-from sklearn import model_selection
-from sklearn import linear_model
 import webbrowser
 
 failed_command = subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
 
 if failed_command.returncode == 0:
+  import sklearn 
+  import numpy as np
+  import matplotlib.pyplot as plt
+  from sklearn import model_selection
+  from sklearn import linear_model
   x=list(range(0,10)) # C creates the list of data between 0-9
   y=[1.8*F+32 for F in x] # F converts the c to f using above generated data
   #y=mx+c
